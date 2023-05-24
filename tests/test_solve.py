@@ -1,4 +1,5 @@
 import numpy as np
+import pytest
 
 from main import solve
 from src.config_interface import Config
@@ -24,34 +25,35 @@ def parse_input_str(input_str):
     )
 
 
-def test_sample_1():
-    cfg = parse_input_str(
-        """3 5
+@pytest.mark.parametrize(
+    ("input_str", "expected"),
+    [
+        (
+            """3 5
 3
 1 0 1 2
 0 1 2 1
-2 3 2 5"""
-    )
-    assert solve(cfg) == 6
-
-
-def test_sample_2():
-    cfg = parse_input_str(
-        """4 4
+2 3 2 5""",
+            6,
+        ),
+        (
+            """4 4
 4
 1 0 1 2
 0 3 2 3
 2 1 4 1
-3 2 3 4"""
-    )
-    assert solve(cfg) == 4
-
-
-def test_sample_3():
-    cfg = parse_input_str(
-        """1000000000 1000000000
+3 2 3 4""",
+            4,
+        ),
+        (
+            """1000000000 1000000000
 1
 0 0 0 1000000000
-"""
-    )
-    assert solve(cfg) == 1000000000000000000
+""",
+            1000000000000000000,
+        ),
+    ],
+)
+def test_solve(input_str, expected):
+    cfg = parse_input_str(input_str)
+    assert solve(cfg) == expected
