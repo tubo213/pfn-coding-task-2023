@@ -5,14 +5,13 @@ Preferred Networks 2023インターン選考課題のリポジトリです。
 ## はじめに
 
 ```
-poetry shell
-poetry install
+poetry install --no-dev
 ```
 
 ## テストケースの実行
 
 ```
-pytest
+poetry run pytest
 ```
 
 
