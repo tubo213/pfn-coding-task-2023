@@ -14,6 +14,9 @@
         "--max-line-length=150",
         "--max-complexity=20"
     ],
+    "python.formatting.blackArgs": [
+        "--line-length=150",
+    ],
     "[python]": {
         "editor.insertSpaces": true,
         "editor.detectIndentation": true,

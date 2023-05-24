@@ -114,7 +114,5 @@ class CompressedPlane:
         self.dy = np.append(dy, 0)
 
         # set the line in the compressed plane by marking the corresponding values as -1.
-        for x1_i, y1_i, x2_i, y2_i in zip(
-            self.x1 * 2, self.y1 * 2, self.x2 * 2, self.y2 * 2
-        ):
+        for x1_i, y1_i, x2_i, y2_i in zip(self.x1 * 2, self.y1 * 2, self.x2 * 2, self.y2 * 2):
             self.values[x1_i : x2_i + 1, y1_i : y2_i + 1] = -1

@@ -104,6 +104,4 @@ class Histogram:
             values (np.ndarray): The values of the histogram.
             d (np.ndarray): The delta array of the histogram.
         """
-        assert len(values) == len(
-            d
-        ), f"The length of values and d must be the same. length of values={len(values)}, length of d={len(d)}"
+        assert len(values) == len(d), f"The length of values and d must be the same. length of values={len(values)}, length of d={len(d)}"

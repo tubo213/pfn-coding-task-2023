@@ -12,9 +12,7 @@ def parse_input() -> Config:
     """
     R, C = map(int, input().split())
     N = int(input())
-    lines = np.array(
-        [list(map(int, input().split())) for _ in range(N)], dtype=np.int64
-    )
+    lines = np.array([list(map(int, input().split())) for _ in range(N)], dtype=np.int64)
     X1, Y1, X2, Y2 = lines.T
     cfg = Config(R, C, X1, Y1, X2, Y2)
 
