@@ -1,4 +1,4 @@
-name: Test with pytest
+name: CI
 
 on:
   push:
@@ -34,3 +34,9 @@ jobs:
     - name: Test with pytest
       run: |
         poetry run pytest
+    - name: Format with black
+      run: |
+        poetry run black
+    - name: Lint with flake8
+      run: |
+        poetry run flake8
