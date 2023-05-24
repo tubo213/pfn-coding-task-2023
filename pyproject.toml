@@ -2,7 +2,7 @@
 name = "pfn"
 version = "0.1.0"
 description = ""
-authors = ["tubo213 <yuuki.32040808@gmail.com>"]
+authors = ["tubo213"]
 
 [tool.poetry.dependencies]
 python = "3.8.10"
