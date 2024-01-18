@@ -2,6 +2,8 @@
 
 Preferred Networks 2023インターン選考課題のリポジトリです。
 
+https://github.com/pfnet/intern-coding-tasks/tree/main/2023/CodingTask
+
 ## Requirements
 - Python 3.8
 - poetry 1.1.13
@@ -18,4 +20,6 @@ poetry install
 poetry run pytest -v
 ```
 
+## Reference
+- https://github.com/pfnet/intern-coding-tasks
 
